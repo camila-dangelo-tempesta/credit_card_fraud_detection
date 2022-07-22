@@ -38,34 +38,30 @@ We will use the public dataset made available by the  [Machine Learning Group](h
   ***
 ## 3. SOLUTION PLANNING
 
-- [x] **Step 01:** **Data Description**:  
+- [x] **Step 01:** **Data Description**
 
-- [x] **Step 02:** **Feature Engineering**:
+- [x] **Step 02:** **Feature Engineering**
 
-- [x] **Step 03:** **Data Filtering**: 
+- [x] **Step 03:** **Data Filtering**
 
-- [x] **Step 04:** **Exploratory Data Analysis**:
+- [x] **Step 04:** **Exploratory Data Analysis**
 
-- [x] **Step 05:** **Data Preparation**:
+- [x] **Step 05:** **Data Preparation**
 
-- [x] **Step 06:** **Feature Selection**:
+- [x] **Step 06:** **Feature Selection**
 
-- [x] **Step 07:** **Machine Learning Modelling**:
+- [x] **Step 07:** **Machine Learning Modelling**
 
-- [x] **Step 08:** **Hyperparameter Fine Tunning**:
-
+- [x] **Step 08:** **Hyperparameter Fine Tunning**
 
 ***
 ## 5. Machine Learning Model Applied
 
-
 ***
 ## 6. Machine Learning Modelo Performance
 
-
 ***
 ## 7. Business Results
-
 
 ***
 ## 8. Conclusions
@@ -79,7 +75,7 @@ We will use the public dataset made available by the  [Machine Learning Group](h
 ***
 Made By **Camila D'Angelo**
 
-- 🔭 I’m currently working on DS community
+- 🔭 I’m currently working on [DS Comuity](https://www.comunidadedatascience.com/) and [Data Science Academy](https://www.datascienceacademy.com.br/bundle/formacao-cientista-de-dados)
 - 🌱 I’m currently learning Data Science
 - 📫 How to reach me: 
 [LinkeldIn](https://www.linkedin.com/in/camiladangelotempesta/)
