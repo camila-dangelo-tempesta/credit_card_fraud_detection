@@ -36,56 +36,56 @@ This dataset presents transactions that occurred in two days, in which we have 4
 ## 3. SOLUTION PLANNING
 
 - [x] **Step 01:** **Data Description**:  My goal is to use statistics metrics to identify data outside the scope of business.
-  - Data Dimension
-  - Data types
-  - Check NA
-  - Fillout NA
-  - Change Types
-  - Descriptive Statistivas
-    * Numerical Attributes
-    * Categorical Attributes
+
 
 - [x] **Step 02:** **Feature Engineering**: Derive new attributes based on the original variables to better describe the phenomenon that will be modeled.
-  - Missing values
-  - Outlier manipulation
-  - Binning
-  - One-hot encoding
-  - Grouping
+
 
 - [x] **Step 03:** **Data Filtering**: Filter rows and select columns that do not contain information for modeling or that do not match the scope of the business
-  - Line filtering
-  - Selection of columns
+ 
 
 - [x] **Step 04:** Exploratory Data Analysis:Explore the data to find insights and better understand the impact of variables on model learning. - Line filtering
-  - Univariate Analysis
-  - Bivariate Analysis
-  - Multivariate analysis
+
 
 - [x] **Step 05:** Data Preparation
-  - Rescaling
-    - Min-Max Scaler
-    - Robust Scaler
-  - Encoding
-    - One Hot Encoding
-    - Label Encoding
-    - Ordinal Encoding
-  - Response Variable Transformation
-    - Logarithm Transformation
-  - Nature Transformation
-    - Sine and Cosine Transformation
+
 
 - [x] **Step 06:** Feature Selection
-  - Embedded Methods
-    - Random Forest
-  - Wrapper Methods
-    - Boruta
+
 
 - [x] **Step 07:** Machine Learning Modelling
-  - Machine Learning model training
+
 
 - [x] **Step 08:** Hyperparameter Fine Tunning
-  - Random Search
 
 
+***
+## 5. Machine Learning Model Applied
+
+
+***
+## 6. Machine Learning Modelo Performance
+
+
+***
+## 7. Business Results
+
+
+***
+## 8. Conclusions
+
+***
+## 9. Lessons Learned
+
+***
+## 10. Next Steps to Improve
+
+***
+Made By **Camila D'Angelo**
+
+- 🔭 I’m currently working on DS community
+- 🌱 I’m currently learning Data Science
+- 📫 How to reach me: 
+[LinkeldIn](https://www.linkedin.com/in/camiladangelotempesta/)
 
 ***
