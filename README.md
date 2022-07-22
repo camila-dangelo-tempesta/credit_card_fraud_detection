@@ -25,6 +25,9 @@ The dataset contains transactions performed with credit cards in September 2013 
 
 This dataset presents transactions that occurred in two days, in which we have 492 frauds in 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) represents 0.172% of all the transactions. It contains only numeric input variables which are the result of a PCA transformation. Due to confidentiality issues, it is not can provide the original features and more background information about the data.
 
+We will use the public dataset made available by the  [Machine Learning Group](https://www.kaggle.com/mlg-ulb/creditcardfraud)
+
+
  ### 2.1 **Assumptions:** 
  
    * Features V1, V2,… V28 are the main components obtained with the PCA, the the only resources that have not been transformed with the PCA are 'Time' and 'Value';
