@@ -4,7 +4,7 @@
 
 <div align="center">
 <p float="left">
-  <img src="/images/rossman_1.jpg" width="1000" height="350"/>
+  <img src="/images/card.png" width="1000" height="500"/>
 </p>
 </div>
 
@@ -38,41 +38,30 @@ We will use the public dataset made available by the  [Machine Learning Group](h
   ***
 ## 3. SOLUTION PLANNING
 
-- [x] **Step 01:** **Data Description**:  My goal is to use statistics metrics to identify data outside the scope of business.
+- [x] **Step 01:** **Data Description**
 
+- [x] **Step 02:** **Feature Engineering**
 
-- [x] **Step 02:** **Feature Engineering**: Derive new attributes based on the original variables to better describe the phenomenon that will be modeled.
+- [x] **Step 03:** **Data Filtering**
 
+- [x] **Step 04:** **Exploratory Data Analysis**
 
-- [x] **Step 03:** **Data Filtering**: Filter rows and select columns that do not contain information for modeling or that do not match the scope of the business
- 
+- [x] **Step 05:** **Data Preparation**
 
-- [x] **Step 04:** Exploratory Data Analysis:Explore the data to find insights and better understand the impact of variables on model learning. - Line filtering
+- [x] **Step 06:** **Feature Selection**
 
+- [x] **Step 07:** **Machine Learning Modelling**
 
-- [x] **Step 05:** Data Preparation
-
-
-- [x] **Step 06:** Feature Selection
-
-
-- [x] **Step 07:** Machine Learning Modelling
-
-
-- [x] **Step 08:** Hyperparameter Fine Tunning
-
+- [x] **Step 08:** **Hyperparameter Fine Tunning**
 
 ***
 ## 5. Machine Learning Model Applied
 
-
 ***
 ## 6. Machine Learning Modelo Performance
 
-
 ***
 ## 7. Business Results
-
 
 ***
 ## 8. Conclusions
@@ -86,9 +75,10 @@ We will use the public dataset made available by the  [Machine Learning Group](h
 ***
 Made By **Camila D'Angelo**
 
-- 🔭 I’m currently working on DS community
+- 🔭 I’m currently working on [DS Comuity](https://www.comunidadedatascience.com/) and [Data Science Academy](https://www.datascienceacademy.com.br/bundle/formacao-cientista-de-dados)
 - 🌱 I’m currently learning Data Science
 - 📫 How to reach me: 
 [LinkeldIn](https://www.linkedin.com/in/camiladangelotempesta/)
+
 
 ***
