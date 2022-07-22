@@ -38,28 +38,21 @@ We will use the public dataset made available by the  [Machine Learning Group](h
   ***
 ## 3. SOLUTION PLANNING
 
-- [x] **Step 01:** **Data Description**:  My goal is to use statistics metrics to identify data outside the scope of business.
+- [x] **Step 01:** **Data Description**:  
 
+- [x] **Step 02:** **Feature Engineering**:
 
-- [x] **Step 02:** **Feature Engineering**: Derive new attributes based on the original variables to better describe the phenomenon that will be modeled.
+- [x] **Step 03:** **Data Filtering**: 
 
+- [x] **Step 04:** **Exploratory Data Analysis**:
 
-- [x] **Step 03:** **Data Filtering**: Filter rows and select columns that do not contain information for modeling or that do not match the scope of the business
- 
+- [x] **Step 05:** **Data Preparation**:
 
-- [x] **Step 04:** Exploratory Data Analysis:Explore the data to find insights and better understand the impact of variables on model learning. - Line filtering
+- [x] **Step 06:** **Feature Selection**:
 
+- [x] **Step 07:** **Machine Learning Modelling**:
 
-- [x] **Step 05:** Data Preparation
-
-
-- [x] **Step 06:** Feature Selection
-
-
-- [x] **Step 07:** Machine Learning Modelling
-
-
-- [x] **Step 08:** Hyperparameter Fine Tunning
+- [x] **Step 08:** **Hyperparameter Fine Tunning**:
 
 
 ***
