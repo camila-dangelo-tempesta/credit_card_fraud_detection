@@ -21,12 +21,13 @@ In this project the objective was to identify a common problem when there are da
 
 ## 2. BUSINESS ASSUMPTIONS
 
+We will use historical data to train models of Machine Learning. We hope the credit card company has a lot more historical examples of correct transactions than fraudulent transactions.
+
 The dataset contains transactions performed with credit cards in September 2013 by European cardholders.
 
 This dataset presents transactions that occurred in two days, in which we have 492 frauds in 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) represents 0.172% of all the transactions. It contains only numeric input variables which are the result of a PCA transformation. Due to confidentiality issues, it is not can provide the original features and more background information about the data.
 
 We will use the public dataset made available by the  [Machine Learning Group](https://www.kaggle.com/mlg-ulb/creditcardfraud)
-
 
  ### 2.1 **Assumptions:** 
  
@@ -52,10 +53,16 @@ We will use the public dataset made available by the  [Machine Learning Group](h
 
 - [x] **Step 07:** **Machine Learning Modelling**
 
-- [x] **Step 08:** **Hyperparameter Fine Tunning**
-
 ***
 ## 5. Machine Learning Model Applied
+
+Machine learning models look for the relationship math in the data. However, our dataset is unbalanced and, in this case, the model will learn much more about a normal transaction than a fraudulent transaction. As a result, the model can classify new fraudulent transactions as if they were normal transactions, simply because he learned more about one class than the other.
+
+To minimize this problem, we are going to apply one of the many techniques of class balancing, creating synthetic data to increase the volume of fraudulent transactions (this is called oversampling) or else we may remove some records from the normal transaction class (this is called undersampling). Undersampling is easier, but it reduces the size of the dataset, which is not the ideal. Oversampling can be more work and more complicated to explain, however it increases the size of the dataset by creating synthetic data based on statistical rules and at random, using observations from the minority class as a starting point.
+
+In this directed study we will use a class balancing technique called **Randomly OverSampling Examples (ROSE)**.
+
+Given the class imbalance ratio, it is ideal to measure accuracy using the metric Area Under the Precision-Recall Curve (AUPRC). Use only accuracy defined by the confusion matrix is not significant for the classification with unbalanced classes and we will also see that.
 
 ***
 ## 6. Machine Learning Modelo Performance
