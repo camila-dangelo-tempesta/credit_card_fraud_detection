@@ -1,6 +1,6 @@
 # **CREDIT CARD FRAUD DETECTION**
 
-## Class Balancing in Financial Fraud Data with ROSE (Random OverSampling Examples)
+## Class Balancing in Financial Fraud Data with ROSE (Random OverSampling)
 
 <div align="center">
 <p float="left">
