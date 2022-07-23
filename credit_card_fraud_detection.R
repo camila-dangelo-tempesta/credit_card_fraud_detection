@@ -36,29 +36,20 @@ dim(dados)
 #
 str(dados)
 
-#### 4.Data Cleaning ####
-
-##### 4.1 Check NA #####
-# Verificando se temos valores ausentes
-sum(is.na(dados))
-
-#### 5. Pre Processing ####
+#### 4. Pre Processing ####
 
 ##### 5.1 Class distribution #####
 # Distribuição de classe: este dataset esta com as classes completamente desbalanceada;
 # Temos cerca de 99% de registros para a classe 0 e menos de 1% para a classe 1;
 prop.table(table(dados$Class))
 
-##### 5.2 Plot Class #####
+##### 4.2 Plot Class #####
 # Graficamente a diferença fica clara
 barplot(prop.table(table(dados$Class)))
 
+#### 5. Modeling ####
 
-
-
-#### 6. Modeling ####
-
-##### 6.1 Test and Training Data #####
+##### 5.1 Test and Training Data #####
 # Vamos dividir os dados em treino e teste, sendo 70% para dados de treino e 30% para dados de teste
 set.seed(7)
 linhas <- sample(1:nrow(dados), 0.7 * nrow(dados))
@@ -82,7 +73,7 @@ prop.table(table(dados_teste$Class))
 # Neste projeto desejamos comparar os valores entre os dataset: balanceado e não balanceado;
 # Então, vamos primeiro criar um modelo de Machine Learning com os dados desbalanceados e comparar com o resultado depois do balanceamento de classe.
 
-##### 6.2 Convert Class to Factor Type #####
+##### 5.2 Convert Class to Factor Type #####
 # Vamos converter a classe para o tipo fator, pois isso é necessário para o treinamento do modelo de classificação;
 # Se não fizermos a conversão, a variável fica como tipo int e o algoritmo vai achar que queremos criar um modelo de regressão.
 
@@ -98,7 +89,7 @@ dados_teste$Class <- as.factor(dados_teste$Class)
 str(dados_treino$Class)
 str(dados_teste$Class)
 
-##### 6.3 Creat Model Unbalanced ####
+##### 5.3 Creat Model Unbalanced ####
 # Vamos criar um modelo antes de aplicar o balanceamento de classe.
 # O algoritmo C5.0 cria um modelo de árvore de decisão e é estudado em detalhes no curso de Machine Learning da FCD
 ?C5.0
@@ -106,21 +97,21 @@ str(dados_teste$Class)
 # Cria o modelo com dados de treino não balanceados
 modelo_v1 <- C5.0(Class ~ ., data = dados_treino)
 
-###### 6.3.1 Prevision Model Unbalanced ######
+###### 5.3.1 Prevision Model Unbalanced ######
 # Agora fazemos previsões com o modelo usando dados de teste
 previsoes_v1 <- predict(modelo_v1, dados_teste)
 
-###### 6.3.2 Confusion Matrix ######
+###### 5.3.2 Confusion Matrix ######
 # Criamos a Confusion Matrix e analisamos a acurácia do modelo
 # O parâmetro positive = '1' indica que a classe 1 é a positiva, ou seja, indica que sim, a transação é fraudulenta
 ?caret::confusionMatrix
 caret::confusionMatrix(dados_teste$Class, previsoes_v1, positive = '1')
 
-###### 6.3.3 ROC curve ######
+###### 5.3.3 ROC curve ######
 # Agora criamos a Curva ROC para encontrar a métrica AUC, conforme indicado no manual em pdf
 roc.curve(dados_teste$Class, previsoes_v1, plotit = T, col = "red")
 
-###### 6.3.4 Result ######
+###### 5.3.4 Result ######
 # Acurácia = 0.999
 # Score AUC = 0.759
 
@@ -128,7 +119,7 @@ roc.curve(dados_teste$Class, previsoes_v1, plotit = T, col = "red")
 # Entretanto, a Score AUC mostra que não é bem assim;
 # Vamos executar a ROSE para esclarecer;
 
-###### 6.3.5 ROSE ######
+###### 5.3.5 ROSE ######
 # Aplicando ROSE (Random OverSampling Example) 
 # Com ROSE conseguimos balancear as clases usando a técnica de Oversampling;
 ?ROSE
@@ -137,36 +128,36 @@ roc.curve(dados_teste$Class, previsoes_v1, plotit = T, col = "red")
 # Se fazemos antes, o padrão usado para aplicar o oversampling será o mesmo nos dados de treino e de teste e, assim,
 # a avaliação do modelo fica comprometida. 
 
-####### 6.3.5.1 ROSE: TREIN  ######
+####### 5.3.5.1 ROSE: TREIN  ######
 # Aplicando ROSE em dados de treino e checando a proporção de classes
 rose_treino <- ROSE(Class ~ ., data = dados_treino, seed = 1)$data
 prop.table(table(rose_treino$Class))
 
 # Resposta: Conseguimos uma proporção quase 50/50 para as duas classes. Não pecisa ser exatamente assim, mas ficou muito bom!
 
-####### 6.3.5.2 ROSE: TEST  ######
+####### 5.3.5.2 ROSE: TEST  ######
 # Aplicando ROSE em dados de teste e checando a proporção de classes
 rose_teste <- ROSE(Class ~ ., data = dados_teste, seed = 1)$data
 prop.table(table(rose_teste$Class))
 
-##### 6.4 Creat Model Balanced ####
+##### 5.4 Creat Model Balanced ####
 
 # Cria o modelo com dados de treino balanceados
 modelo_v2 <- C5.0(Class ~ ., data = rose_treino)
 
-###### 6.4.1 Prevision Model Balanced ######
+###### 5.4.1 Prevision Model Balanced ######
 # E fazemos previsões usando dados de teste balanceados
 previsoes_v2 <- predict(modelo_v2, rose_teste)
 
-###### 6.4.2 Confusion Matrix ######
+###### 5.4.2 Confusion Matrix ######
 # Vamos verificar a acurácia
 caret::confusionMatrix(rose_teste$Class, previsoes_v2, positive = '1')
 
-###### 6.4.3 ROC curve ######
+###### 5.4.3 ROC curve ######
 # Calculamos o Score AUC
 roc.curve(rose_teste$Class, previsoes_v2, plotit = T, col = "green", add.roc = T)
 
-###### 6.4.4 Result ######
+###### 5.4.4 Result ######
 # Acurácia = 0.993
 # Score AUC = 0.993
 
@@ -174,6 +165,3 @@ roc.curve(rose_teste$Class, previsoes_v2, plotit = T, col = "green", add.roc = T
 # forma considerável, de 76% para 99%. Isso comprova que o modelo_v2 é muito melhor e mais estável que o modelo_v1.
 
 # Isso apenas porque balanceamos as classes!
-
-
-
