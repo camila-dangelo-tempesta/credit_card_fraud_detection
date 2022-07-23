@@ -35,7 +35,7 @@ We will use the public dataset made available by the  [Machine Learning Group](h
    * The 'Hour' resource contains the seconds elapsed between each transaction and the first transaction in the dataset;
    * The 'Amount' resource is the transaction amount;
    * O resource 'Class' is the response variable and takes the value 1 in case of fraud and 0 otherwise.
-   
+
   ***
 ## 3. SOLUTION PLANNING
 
