@@ -11,7 +11,7 @@
 ***
 ## 1. BUSINESS PROBLEMS
 
-In this directed study we will use a class balancing technique called Randomly OverSampling Examples (ROSE) and with a perfect R package for this task, called ROSE.
+In this directed study we will use a class balancing technique called Randomly Over Sampling Examples (ROSE) and with a perfect R package for this task, called ROSE.
 
 ### 1.1 **Context:**
  
